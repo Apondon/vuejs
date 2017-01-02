@@ -1,10 +1,8 @@
+
 [
   {
-    "name": "aihong",
-    "age": 18
-  },
-  {
-    "name": "junchao",
-    "age": 20
+    "img":"img src (string)",
+    "tit":"news title (string)",
+    "cmt":"number of the comments(number)"
   }
 ]

@@ -1,0 +1,32 @@
+<div class="m-index">
+	<header>
+		<p>趣头条</p>
+		<span class="yo-ico">&#xe677;</span>
+	</header>
+	<nav>
+		<ul>
+			<li>热点</li>
+			<li>新闻</li>
+			<li>体育</li>
+			<li>财经</li>
+			<li>娱乐</li>
+		</ul>
+	</nav>
+	<section></section>
+	<footer>
+		<ul>
+			<li>
+				<i class="yo-ico">&#xe608;</i>
+				<span>首页</span>
+			</li>
+			<li>
+				<i class="yo-ico">&#xe60d;</i>
+				<span>视频</span>
+			</li>
+			<li>
+				<i class="yo-ico">&#xe648;</i>
+				<span>我的</span>
+			</li>
+		</ul>
+	</footer>
+</div>

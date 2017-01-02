@@ -29,6 +29,11 @@ module.exports = {
 				test:/\.scss$/,
 				// loader:'style!css!sass-loader'
 				loader:ET.extract('style-loader','css!sass')
+			},
+
+			{
+				test:/\.string$/,
+				loader:'string'
 			}
 
 		]
@@ -42,8 +47,8 @@ module.exports = {
 		proxy:{
 			'/api':{
 				target:'http://localhost:3000',
-				parhRewrite:{
-					'^/api':'',
+				pathRewrite:{
+					'^/api':''
 				}
 
 			}
