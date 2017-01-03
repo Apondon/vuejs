@@ -13,11 +13,17 @@
 			<div class="swiper-wrapper">
 				<div class="swiper-slide" id="index-scroll">
 					<div>
-						<div>刷新</div>
+						<div class="refrash">刷新</div>
 						<ul>
-							<li v-for="item in list">{{item.tit}}</li>
+							<li v-for="item in list">
+								<img :src="item.img">
+								<div>
+									<p>{{item.tit}}</p>
+									<span>{{item.cmt}}评</span>
+								</div>	
+							</li>
 						</ul>
-						<div>加载</div>
+						<div class="loading">加载</div>
 					</div>
 				</div>
 				<div class="swiper-slide">slider2</div>

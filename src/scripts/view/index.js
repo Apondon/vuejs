@@ -11,7 +11,6 @@ new Vue ({
 	methods:{
 		changeTab:function(index){
 			this.swiper.slideTo(index);
-			this.navIndex = index;
 		}
 	},
 
@@ -25,7 +24,13 @@ new Vue ({
 				onSlideChangeStart: function(swiper){
 					that.navIndex = swiper.activeIndex;
 				}
-			})
-		}).catch(e => console.log("error",e))
+			});
+			setTimeout(function(){
+				var myScroll = new IScroll('#index-scroll', {
+					probeType: 3,
+					mouseWheel: true
+				});
+			},0)
+		}).catch(e => console.log("error",e));
 	}
 })
