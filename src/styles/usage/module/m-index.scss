@@ -32,7 +32,7 @@ html{
   nav{
     background: #fff;
     height: .22rem;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #f1f1f1;
     ul{
       @include flexbox();
       height: inherit;
@@ -41,13 +41,22 @@ html{
         @include flex();
         text-align: center;
       }
+      li.active{
+          span{
+            color: #45c018;
+            border-bottom: 2px solid #45c018;
+            padding: .02rem 0;
+          }
+      }
     }
   }
 
   section {
-    background: gray;
     @include flex();
     width: 100%;
+    #index-swiper{
+      height: 100%;
+    }
   }
 
   footer {

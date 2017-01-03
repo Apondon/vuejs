@@ -1,8 +1,43 @@
 
 [
   {
-    "img":"img src (string)",
-    "tit":"news title (string)",
-    "cmt":"number of the comments(number)"
+    "img":"/images/index/ad.png",
+    "tit":"常州12岁男孩照顾病父分担家务 称想快点长大挣钱",
+    "cmt":703
+  },
+  {
+    "img":"/images/index/news1.png",
+    "tit":"你以为驾考新政离你很远那是因为你不知道这三件",
+    "cmt":8
+  },
+  {
+    "img":"/images/index/news2.png",
+    "tit":"谢霆锋力挺王菲：她声音很美妙",
+    "cmt":144
+  },
+  {
+    "img":"/images/index/news3.png",
+    "tit":"当老虎是病猫！男子作死挑逗老虎：下一秒悲剧",
+    "cmt":1
+  },
+  {
+    "img":"/images/index/news4.png",
+    "tit":"你的钱袋子鼓了，今年这些钱要涨",
+    "cmt":4
+  },
+  {
+    "img":"/images/index/news5.png",
+    "tit":"你知道挖掘机故障代码，你懂多少？",
+    "cmt":1
+  },
+  {
+    "img":"/images/index/news6.png",
+    "tit":"休闲业带来忙生意农家乐一年创收5.8亿元！",
+    "cmt":88
+  },
+  {
+    "img":"/images/index/news7.png",
+    "tit":"格林三双三巨头同取20+勇士胜掘金三连胜",
+    "cmt":5
   }
 ]
