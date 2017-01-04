@@ -13,7 +13,7 @@
 			<div class="swiper-wrapper">
 				<div class="swiper-slide" id="index-scroll">
 					<div class="scroll-container">
-						<div class="refrash">刷新</div>
+						<div class="refrash hide">刷新</div>
 						<ul>
 							<li v-for="item in list">
 								<img :src="item.img">
@@ -23,7 +23,7 @@
 								</div>
 							</li>
 						</ul>
-						<div class="load">加载</div>
+						<div class="load hide">加载</div>
 					</div>
 				</div>
 				<div class="swiper-slide">slider2</div>
