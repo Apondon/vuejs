@@ -34,9 +34,20 @@ module.exports = {
 			{
 				test:/\.string$/,
 				loader:'string'
+			},
+
+			{
+				test:/\.vue$/,
+				loader:'vue'
 			}
 
 		]
+	},
+
+	vue:{
+		loader:{
+			js:'babel'
+		}
 	},
 
 	devServer:{

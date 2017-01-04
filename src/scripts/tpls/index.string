@@ -12,7 +12,7 @@
 		<div class="swiper-container" id="index-swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide" id="index-scroll">
-					<div>
+					<div class="scroll-container">
 						<div class="refrash">刷新</div>
 						<ul>
 							<li v-for="item in list">
@@ -20,10 +20,10 @@
 								<div>
 									<p>{{item.tit}}</p>
 									<span>{{item.cmt}}评</span>
-								</div>	
+								</div>
 							</li>
 						</ul>
-						<div class="loading">加载</div>
+						<div class="load">加载</div>
 					</div>
 				</div>
 				<div class="swiper-slide">slider2</div>

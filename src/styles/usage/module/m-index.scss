@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "../libs/swiper.scss";
 @import "./common";
 html{
   background-color: #fff;
@@ -57,6 +56,19 @@ html{
     width: 100%;
     #index-swiper{
       height: 100%;
+      .refrash{
+        height: .35rem;
+        line-height: .35rem;
+        text-align: center;
+      }
+      .load{
+        height: .35rem;
+        line-height: .35rem;
+        text-align: center;
+      }
+      // .hide{
+      //   display: none;
+      // }
       ul{
         width: 95%;
         margin: .05rem auto;

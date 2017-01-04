@@ -6,5 +6,3 @@ var html = require('./scripts/tpls/index.string');
 common.render(html);
 
 require('./scripts/view/index.js');
-
-console.log($);
