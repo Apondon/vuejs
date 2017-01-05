@@ -45,10 +45,16 @@ module.exports = {
 	},
 	//解析vue中的es6代码
 	vue:{
-		loader:{
+		loaders:{
 			js:'babel'
 		}
 	},
+
+	// resolve:{
+	// 	alias:{
+	// 		'vue$':'vue/dist/vue.js'
+	// 	}
+	// },
 
 	devServer:{
 		contentBase:__dirname + '/prd',
@@ -67,7 +73,7 @@ module.exports = {
 	},
 
 	plugins: [
-		// new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
 		new ET('bundle.css')
 
 	]

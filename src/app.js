@@ -1,20 +1,24 @@
 require('./styles/usage/app.scss');
 
-// var common = require('./scripts/utils/util.common.js');
-// var html = require('./scripts/tpls/index.string');
-//
-// common.render(html);
-//
-// require('./scripts/view/index.js');
+var layout = require('./scripts/tpls/layout.string');
+var common = require('./scripts/utils/util.common.js');
+
+common.render(layout);
+
 
 // components
 import index from "./scripts/components/index.vue";
 import home from "./scripts/components/home.vue";
 
-// router
-const routes = [
-  {path:'/',component:index}
-];
+// vue2.1 router
+const routes = [{
+    path: '/',
+    component: index,
+    children: [{
+        path: '/',
+        component: home
+    }]
+}];
 
 const router =new VueRouter({
   routes

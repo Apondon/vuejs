@@ -1,3 +1,5 @@
+
+// var layout = require('../tpls/layout.string');
 var common = require('../utils/util.common.js');
 
 
@@ -32,7 +34,7 @@ new Vue ({
 			// 	common.scroll(that);
 			// },0)
 
-			//判断图片是否完全加载，之后加载iscroll组件 
+			//判断图片是否完全加载，之后加载iscroll组件
 			common.isAllLoaded('#index-scroll ul', function () {
 			  common.scroll(that);
 			})
