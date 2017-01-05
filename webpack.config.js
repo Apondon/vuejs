@@ -43,7 +43,7 @@ module.exports = {
 
 		]
 	},
-
+	//解析vue中的es6代码
 	vue:{
 		loader:{
 			js:'babel'

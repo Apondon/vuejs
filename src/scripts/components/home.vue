@@ -1,0 +1,38 @@
+<template id="">
+  <div class="container">
+    <header>
+      <p>趣头条</p>
+      <span class="yo-ico">&#xe677;</span>
+    </header>
+    <nav>
+      <ul>
+        <li v-on:click="changeTab(index)" :class="{active: index == navIndex}" v-for="(item,index) in nav"><span>{{item}}</span></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="swiper-container" id="index-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="index-scroll">
+            <div class="scroll-container">
+              <div class="refrash hide">刷新</div>
+              <ul>
+                <li v-for="item in list">
+                  <img :src="item.img">
+                  <div>
+                    <p>{{item.tit}}</p>
+                    <span>{{item.cmt}}评</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="load hide">加载</div>
+            </div>
+          </div>
+          <div class="swiper-slide">slider2</div>
+          <div class="swiper-slide">slider3</div>
+          <div class="swiper-slide">slider4</div>
+          <div class="swiper-slide">slider5</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>

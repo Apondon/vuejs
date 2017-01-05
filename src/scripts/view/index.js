@@ -27,9 +27,16 @@ new Vue ({
 				}
 			});
 			// console.log($('#index-scroll'));
-			setTimeout(function(){
-				common.scroll(that);
-			},0)
+			//临时方法加载iscroll组件
+			// setTimeout(function(){
+			// 	common.scroll(that);
+			// },0)
+
+			//判断图片是否完全加载，之后加载iscroll组件 
+			common.isAllLoaded('#index-scroll ul', function () {
+			  common.scroll(that);
+			})
+
 		}).catch(e => console.log("error",e));
 	}
 })

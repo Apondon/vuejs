@@ -1,26 +1,26 @@
 [
   {
-    "url":"img url(string)",
+    "img":"/images/video/video1.png",
     "tit":"video's title(string)"
   },
   {
-    "url":"img url(string)",
+    "img":"/images/video/video2.png",
     "tit":"video's title(string)"
   },
   {
-    "url":"img url(string)",
+    "img":"/images/video/video1.png",
     "tit":"video's title(string)"
   },
   {
-    "url":"img url(string)",
+    "img":"/images/video/video2.png",
     "tit":"video's title(string)"
   },
   {
-    "url":"img url(string)",
+    "img":"/images/video/video1.png",
     "tit":"video's title(string)"
   },
   {
-    "url":"img url(string)",
+    "img":"/images/video/video2.png",
     "tit":"video's title(string)"
   }
 ]
