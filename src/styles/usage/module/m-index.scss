@@ -96,11 +96,13 @@ html{
               @include flex();
               @include flexbox();
               @include flex-direction(column);
+              @include align-content(space-around);
               p{
                 @include ellipsis(null, 2);
               }
               span{
                 color: #b3b3b3;
+                margin-top: .1rem;
               }
             }
           }
