@@ -6,7 +6,7 @@
     </header>
     <nav>
       <ul>
-        <li v-on:click="changeTab(index)" :class="{active: index == navIndex}" v-for="(item,index) in nav"><span>{{item}}</span></li>
+        <li @click="changeTab(index)" :class="{active: index == navIndex}" v-for="(item,index) in nav"><span>{{item}}</span></li>
       </ul>
     </nav>
     <section>
@@ -36,40 +36,44 @@
     </section>
   </div>
 </template>
-<script type="text/javascript">
+<script>
   var common = require('../utils/util.common.js');
+
   module.exports = {
     data:function(){
       return{
         swiper:null,
         navIndex:0,
         nav:['热点','新闻','体育','财经','娱乐'],
-        list:[],
-        methods:{
-      		changeTab:function(index){
-      			this.swiper.slideTo(index);
-      		}
-      	},
-
-      	mounted:function(){
-      		fetch('/api/list').then(response => response.json())
-      		.then(res => {
-      			var that = this;
-      			that.list = res;
-      			that.swiper = new Swiper('#index-swiper',{
-      				loop:false,
-      				onSlideChangeStart: function(swiper){
-      					that.navIndex = swiper.activeIndex;
-      				}
-      			});
-
-      			common.isAllLoaded('#index-scroll ul', function () {
-      			  common.scroll(that);
-      			})
-
-      		}).catch(e => console.log("error",e));
-      	}
+        list:[]
       }
-    }
+    },
+
+    methods:{
+      changeTab:function(index){
+        this.swiper.slideTo(index);
+      }
+    },
+
+  	mounted:function(){
+      fetch('/api/list').then(function(response) {
+        return response.json();
+      }).then(function(res) {
+          var that = this;
+    			that.list = res;
+    			that.swiper = new Swiper('#index-swiper',{
+    				loop:false,
+    				onSlideChangeStart: function(swiper){
+    					that.navIndex = swiper.activeIndex;
+    				}
+          });
+        	common.isAllLoaded('#index-scroll ul', function () {
+    			  common.scroll(that);
+    			})
+      }).catch(function(e) {
+        console.log("Oops, error");
+      });
+  	}
+
   }
 </script>

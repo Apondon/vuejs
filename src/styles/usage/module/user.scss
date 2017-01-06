@@ -1,0 +1,14 @@
+@import "./common";
+.user{
+  @include flex();
+  width: 100%;
+  header {
+    height: .44rem;
+    position: relative;
+    p{
+      height: inherit;
+      line-height: .44rem;
+      text-align: center;
+    }
+  }
+}

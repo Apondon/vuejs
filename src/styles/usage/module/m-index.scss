@@ -129,6 +129,11 @@ html{
             color: #5d646f;
           }
         }
+        li.active{
+          i,span{
+            color:#45c018;
+          }
+        }
       }
     }
     > * {
