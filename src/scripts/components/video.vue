@@ -5,7 +5,7 @@
         <span class="yo-ico">&#xe677;</span>
       </div>
       <ul>
-        <li :class="{active: index == videoIndex}" v-for="(item,index) in title">{{item}}</li>
+        <li @click="changeTab(index)" :class="{active: index == videoIndex}" v-for="(item,index) in title">{{item}}</li>
       </ul>
 
     </header>
@@ -17,7 +17,7 @@
               <div class="video-refrash hide">刷新</div>
               <ul>
                 <li v-for="(item,index) in list">
-                    <p>sososossos</p>
+                    <p>{{item.tit}}</p>
                     <img :src="item.img" alt="">
                 </li>
               </ul>
@@ -29,12 +29,6 @@
           <div class="swiper-slide">slider4</div>
         </div>
       </div>
-      <!-- <ul>
-        <li>
-          <p>sososossos</p>
-          <img src="/images/video/video1.png" alt="">
-        </li>
-      </ul> -->
     </section>
   </div>
 </template>
@@ -50,6 +44,11 @@
         list:[]
       }
     },
+    methods:{
+      changeTab:function(index){
+        this.swiper.slideTo(index);
+      }
+    },
     mounted: function () {
       fetch('/api/video').then(response => response.json())
       .then(res => {
@@ -63,7 +62,10 @@
             that.videoIndex = swiper.activeIndex;
           }
         });
-
+        var videoScroll = new IScroll('#video-scroll', {
+    			probeType: 3,
+    			mouseWheel: true
+    		});
         // common.isAllLoaded('#video-scroll ul', function () {
         //   common.scroll(that);
         // })
