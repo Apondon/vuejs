@@ -55,25 +55,48 @@
       }
     },
 
-  	mounted:function(){
-      fetch('/api/list').then(function(response) {
-        return response.json();
-      }).then(function(res) {
-          var that = this;
-    			that.list = res;
-    			that.swiper = new Swiper('#index-swiper',{
-    				loop:false,
-    				onSlideChangeStart: function(swiper){
-    					that.navIndex = swiper.activeIndex;
-    				}
-          });
-        	common.isAllLoaded('#index-scroll ul', function () {
-    			  common.scroll(that);
-    			})
-      }).catch(function(e) {
-        console.log("Oops, error");
-      });
-  	}
+    mounted: function () {
+      fetch('/api/list').then(response => response.json())
+      .then(res => {
+
+        var that = this;
+        that.list = res;
+        that.swiper = new Swiper('#index-swiper', {
+          loop: false,
+          onSlideChangeStart: function(swiper){
+            that.navIndex = swiper.activeIndex;
+          }
+        });
+
+        common.isAllLoaded('#index-scroll ul', function () {
+          common.scroll(that);
+        })
+      })
+      .catch(e => console.log("Oops, error", e));
+    }
+  	// mounted:function(){
+    //   fetch('/api/list').then(function(response) {
+    //     return response.json();
+    //   }).then(function(res) {
+    //       var that = this;
+    //       // console.log(list);
+    //       console.log(that.list);
+    // 			that.list = res;
+    //       console.log(that.list);
+    // 			that.swiper = new Swiper('#index-swiper',{
+    // 				loop:false,
+    // 				onSlideChangeStart: function(swiper){
+    // 					that.navIndex = swiper.activeIndex;
+    // 				}
+    //       });
+    //       // console.log(that.swiper);
+    //     	common.isAllLoaded('#index-scroll ul', function () {
+    // 			  common.scroll(that);
+    // 			})
+    //   }).catch(function(e) {
+    //     console.log("Oops, error");
+    //   });
+  	// }
 
   }
 </script>

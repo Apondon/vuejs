@@ -50,11 +50,11 @@ module.exports = {
 		}
 	},
 
-	// resolve:{
-	// 	alias:{
-	// 		'vue$':'vue/dist/vue.js'
-	// 	}
-	// },
+	resolve:{
+		alias:{
+			'vue$':'vue/dist/vue.js'
+		}
+	},
 
 	devServer:{
 		contentBase:__dirname + '/prd',
