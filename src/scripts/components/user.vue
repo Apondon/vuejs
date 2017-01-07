@@ -7,7 +7,7 @@
       <div>this is user</div>
       <ul>
         <li v-for="item in userNav">
-          <b>{{item}}</b>
+          <b>应该是一些{{item}}</b>
         </li>
       </ul>
     </section>

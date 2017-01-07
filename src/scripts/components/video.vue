@@ -2,7 +2,13 @@
   <div class="videoBox">
     <header>
       <div class="v-find">
-        <span class="yo-ico">&#xe677;</span>
+        <router-link v-bind:to="'/search'">
+          <span class="yo-ico">
+
+              &#xe677;
+
+          </span>
+        </router-link>
       </div>
       <ul>
         <li @click="changeTab(index)" :class="{active: index == videoIndex}" v-for="(item,index) in title">{{item}}</li>
