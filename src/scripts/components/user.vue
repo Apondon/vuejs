@@ -6,7 +6,7 @@
     <section>
       <div></div>
       <ul>
-        <li v-for="item in useerNav">
+        <li v-for="item in userNav">
           <i>{{item.ico}}</i>
           <b>{{item.title}}</b>
         </li>
@@ -47,5 +47,5 @@ module.exports = {
       ]
     }
   }
-
+}
 </script>

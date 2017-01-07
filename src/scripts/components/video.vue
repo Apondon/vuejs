@@ -62,13 +62,9 @@
             that.videoIndex = swiper.activeIndex;
           }
         });
-        var videoScroll = new IScroll('#video-scroll', {
-    			probeType: 3,
-    			mouseWheel: true
-    		});
-        // common.isAllLoaded('#video-scroll ul', function () {
-        //   common.scroll(that);
-        // })
+        common.isAllLoaded('#video-scroll ul', function () {
+          common.videoScroll(that);
+        })
       })
       .catch(e => console.log("Oops, error", e));
     }

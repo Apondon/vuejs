@@ -85,7 +85,58 @@ var common = {
               }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
           }
       }
-  }
+  },
+	// 视频模块scroll上拉加载下拉刷新功能
+	videoScroll:function(that){
+		var videoScroll = new IScroll('#video-scroll', {
+			probeType: 3,
+			mouseWheel: true
+		});
+
+		var scrollHeight = 35;
+
+		$('.video-refrash').removeClass('hide');
+		$('.video-load').removeClass('hide');
+
+		videoScroll.scrollBy(0, -scrollHeight);
+
+		videoScroll.on('scrollEnd', function () {
+				if (this.y >= -scrollHeight && this.y < 0) {
+						videoScroll.scrollTo(0, -scrollHeight);
+
+				} else if (this.y >= 0) {
+
+						//TODO ajax下拉刷新数据
+
+						setTimeout(function () {
+								videoScroll.scrollTo(0, -scrollHeight);
+
+						}, 100);
+				}
+
+				var maxY = this.maxScrollY - this.y;
+				if (maxY > -scrollHeight && maxY < 0) {
+						var self = this;
+						videoScroll.scrollTo(0, self.maxScrollY + scrollHeight);
+
+				} else if (maxY >= 0) {
+
+						//TODO ajax上拉加载数据
+						var self = this;
+
+						fetch('/api/videomore')
+						.then(response => response.json())
+						.then(res => {
+							that.list = that.list.concat(res);
+
+							videoScroll.refresh();
+
+							videoScroll.scrollTo(0, self.maxScrollY - 375);
+
+						})
+				}
+		})
+	}
 }
 
 module.exports = common;
