@@ -11,6 +11,8 @@ import index from "./scripts/components/index.vue";
 import home from "./scripts/components/home.vue";
 import video from "./scripts/components/video.vue"
 import user from "./scripts/components/user.vue"
+import search from "./scripts/components/search.vue"
+
 
 // vue2.1 router
 const routes = [{
@@ -29,7 +31,12 @@ const routes = [{
         component:user
       }
     ]
-}];
+  },
+  {
+    path:'/search',
+    component:search
+  }
+];
 
 const router =new VueRouter({
   routes

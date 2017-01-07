@@ -1,0 +1,40 @@
+@import "./common";
+.search{
+  height: 100%;
+  width: 100%;
+  header {
+    @include flexbox();
+    height: .44rem;
+
+    border-bottom: 1px solid #5d646f;
+    .searchBox{
+      @include flex();
+      .searchText{
+        width: 90%;
+        height: .3rem;
+        margin: .06rem auto;
+        @include border(1px, #5d646f, solid, .15rem);
+        input{
+          border: none;
+          outline: none;
+          height: .3rem;
+          width: 70%;
+        }
+        span{
+          display: inline-block;
+          height: .3rem;
+          width: .3rem;
+          line-height: .3rem;
+          text-align: center;
+        }
+      }
+    }
+    .goback{
+      display: block;
+      width: .4rem;
+      height: 100%;
+      line-height: .44rem;
+      text-align: center;
+    }
+  }
+}

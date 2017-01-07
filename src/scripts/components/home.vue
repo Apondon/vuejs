@@ -2,7 +2,9 @@
   <div class="container">
     <header>
       <p>趣头条</p>
-      <span class="yo-ico">&#xe677;</span>
+      <router-link v-bind:to="'/search'">
+        <span class="yo-ico">&#xe677;</span>
+        </router-link>
     </header>
     <nav>
       <ul>
